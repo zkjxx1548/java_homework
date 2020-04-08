@@ -33,8 +33,8 @@ class ApplicationTest {
     Application.init("A:8,B:10");
 
     String aTicket = Application.park("A12198");
-    String acar = Application.fetch(aTicket);
-    assertEquals("A12198", acar);
+    String aCar = Application.fetch(aTicket);
+    assertEquals("A12198", aCar);
 
     String bTicket = Application.park("B78210");
     String bCar = Application.fetch(bTicket);
@@ -55,7 +55,7 @@ class ApplicationTest {
   }
 
   @Test
-  void should_throw_exception_with_message_when_fetch_given_spacee_has_no_car() {
+  void should_throw_exception_with_message_when_fetch_given_space_has_no_car() {
     Application.init("A:8,B:10");
 
     String aTicket = Application.park("A12098");
